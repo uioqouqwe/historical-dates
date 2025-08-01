@@ -20,18 +20,21 @@
         width: 1px;
         height: 100%;
         left: calc(50% - 2px);
+        z-index: -1;
     }
 
     &:after {
         height: 1px;
         width: 100%;
         top: 30rem;
+        z-index: -1;
     }
 }
 
 .Title {
     padding-left: 5rem;
     width: 22rem;
+    margin: 0;
 
     font-weight: 700;
     font-size: 3.5rem;
@@ -50,4 +53,15 @@
 
         background: linear-gradient(#3877EE, #EF5DA8);
     }
+}
+
+.Swiper {
+    box-sizing: border-box;
+    position: absolute;
+    top: 13.4375rem;
+    left: calc(50% - 16.5625rem);
+    width: 33.125rem;
+    height: 33.125rem;
+    border-radius: 50%;
+    border: 1px solid rgba(66, 86, 122, 0.1);
 }

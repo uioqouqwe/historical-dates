@@ -1,4 +1,4 @@
-export type TPeriod = readonly [starts: number, ends: number];
+type TPeriod = readonly [starts: number, ends: number];
 
 type THistoricalDate = {
     year: number
@@ -7,5 +7,6 @@ type THistoricalDate = {
 
 export type THistoricalDatesInPeriod = {
     period: TPeriod
+    section?: string
     dates: THistoricalDate[]
 }

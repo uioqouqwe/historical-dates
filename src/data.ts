@@ -3,6 +3,7 @@ import { THistoricalDatesInPeriod } from './types/historicalDates'
 export const historicalDates: THistoricalDatesInPeriod[] = [
     {
         period: [1000, 1200],
+        section: 'История',
         dates: [
             { year: 1066, description: 'Нормандское завоевание Англии' },
             { year: 1095, description: 'Начало Первого крестового похода' },
@@ -12,6 +13,7 @@ export const historicalDates: THistoricalDatesInPeriod[] = [
     },
     {
         period: [1200, 1400],
+        section: 'История',
         dates: [
             { year: 1204, description: 'Завоевание Константинополя крестоносцами' },
             { year: 1215, description: 'Подписание Великой хартии вольностей' },
@@ -22,6 +24,7 @@ export const historicalDates: THistoricalDatesInPeriod[] = [
     },
     {
         period: [1400, 1600],
+        section: 'История',
         dates: [
             { year: 1453, description: 'Падение Константинополя' },
             { year: 1492, description: 'Открытие Америки Христофором Колумбом' },
@@ -31,6 +34,7 @@ export const historicalDates: THistoricalDatesInPeriod[] = [
     },
     {
         period: [1600, 1800],
+        section: 'История',
         dates: [
             { year: 1618, description: 'Начало Тридцатилетней войны' },
             { year: 1683, description: 'Венская битва' },
@@ -41,6 +45,7 @@ export const historicalDates: THistoricalDatesInPeriod[] = [
     },
     {
         period: [1800, 1900],
+        section: 'История',
         dates: [
             { year: 1812, description: 'Отечественная война 1812 года' },
             { year: 1815, description: 'Битва при Ватерлоо' },
@@ -51,6 +56,7 @@ export const historicalDates: THistoricalDatesInPeriod[] = [
     },
     {
         period: [1900, 2000],
+        section: 'История',
         dates: [
             { year: 1914, description: 'Начало Первой мировой войны' },
             { year: 1917, description: 'Октябрьская революция в России' },

@@ -33,6 +33,9 @@
     "webpack-dev-server": "^5.2.2"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "classnames": "^2.5.1",
+    "gsap": "^3.13.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "swiper": "^11.2.10"
