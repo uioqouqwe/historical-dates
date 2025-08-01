@@ -1,0 +1,53 @@
+.Container {
+    width: 90rem;
+    height: 67.5rem;
+    margin: 0 auto;
+    padding-top: 10.625rem;
+
+    border-left: 1px solid rgba(66, 86, 122, 0.1);
+    border-right: 1px solid rgba(66, 86, 122, 0.1);
+
+    position: relative;
+
+    &:before, &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        background: rgba(66, 86, 122, 0.1);
+    }
+
+    &:before {
+        width: 1px;
+        height: 100%;
+        left: calc(50% - 2px);
+    }
+
+    &:after {
+        height: 1px;
+        width: 100%;
+        top: 30rem;
+    }
+}
+
+.Title {
+    padding-left: 5rem;
+    width: 22rem;
+
+    font-weight: 700;
+    font-size: 3.5rem;
+    line-height: 120%;
+
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 5px;
+        height: 7.5rem;
+        transform: translateY(-50%);
+
+        background: linear-gradient(#3877EE, #EF5DA8);
+    }
+}
