@@ -13,7 +13,16 @@ function PeriodNumber({ number, className }: Readonly<TProps>) {
     const periodNumberRef = useRef<HTMLSpanElement>(null);
 
     useGSAP(() => {
-        gsap.fromTo(periodNumberRef.current, { textContent: previousNumber }, { textContent: number, duration: 1, snap: { textContent: 1 } });
+        gsap.fromTo(
+            periodNumberRef.current,
+            { textContent: previousNumber },
+            {
+                textContent: number,
+                duration: 1,
+                snap: { textContent: 1 },
+                ease: 'power3.out',
+            }
+        );
     }, [number]);
 
     return (
