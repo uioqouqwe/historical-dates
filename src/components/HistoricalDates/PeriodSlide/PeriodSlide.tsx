@@ -14,11 +14,11 @@ type TProps = {
 function PeriodSlide({ index, activeSlide, setActiveSlide, transform }: Readonly<TProps>) {
     return (
         <div
-            className={classes.Slide}
+            className={cx({ Slide: true, Active: index === activeSlide })}
             style={{ transform }}
             onClick={() => setActiveSlide()}
         >
-            <button className={cx({ SlideButton: true, Active: index === activeSlide })}>
+            <button className={classes.SlideButton}>
                 <span
                     style={{
                         transform: transform.replace('calc(', 'calc(-'),

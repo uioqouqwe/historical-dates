@@ -7,13 +7,24 @@
     left: -1.75rem;
     transform-origin: calc(50% + 16.5625rem);
     cursor: pointer;
+    z-index: 1;
 
     transition: transform 1s ease-in-out;
 
     &:hover {
         .SlideButton {
             transform: scale(1);
-            background: #FFFFFF;
+            background: #F4F5F9;
+        }
+    }
+
+    &.Active {
+        cursor: unset;
+
+        .SlideButton {
+            transform: scale(1);
+            background: #F4F5F9;
+            cursor: unset;
         }
     }
 }
@@ -37,11 +48,6 @@
     transform: scale(0.1);
 
     transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
-
-    &.Active {
-        transform: scale(1);
-        background: #FFFFFF;
-    }
 }
 
 .SlideNumber {

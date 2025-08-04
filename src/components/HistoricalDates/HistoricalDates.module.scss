@@ -65,3 +65,71 @@
     border-radius: 50%;
     border: 1px solid rgba(66, 86, 122, 0.1);
 }
+
+.Period {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(calc(-50% - 1rem), -50%);
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12.5rem;
+    line-height: 10rem;
+    text-align: center;
+    letter-spacing: -0.02em;
+
+    .PeriodStart {
+        color: #5D5FEF;
+    }
+
+    .PeriodEnd {
+        color: #EF5DA8;
+    }
+}
+
+.SwiperControls {
+    margin: 24.5625rem 0 0 5rem;
+}
+
+.SwiperControlsNumber {
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+}
+
+.SwiperControlsButtons {
+    margin-top: 1.25rem;
+    display: flex;
+    gap: 1.25rem;
+
+    .ControlButton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        width: 3.125rem;
+        height: 3.125rem;
+        border-radius: 50%;
+        border: 1px solid rgb(66, 86, 122);
+        background: #F4F5F9;
+        cursor: pointer;
+
+        &:hover {
+            background: #FFFFFF;
+        }
+
+        .Arrow {
+            stroke: rgb(66 86 122);
+        }
+
+        &.Disabled {
+            border: 1px solid rgba(66, 86, 122, 0.5);
+            cursor: unset;
+            
+            .Arrow {
+                stroke: rgba(66, 86, 122, 0.5);
+            }
+        }
+    }
+}
