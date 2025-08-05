@@ -3,10 +3,8 @@
     height: 67.5rem;
     margin: 0 auto;
     padding-top: 10.625rem;
-
     border-left: 1px solid rgba(66, 86, 122, 0.1);
     border-right: 1px solid rgba(66, 86, 122, 0.1);
-
     position: relative;
 
     &:before, &:after {
@@ -35,11 +33,9 @@
     padding-left: 5rem;
     width: 22rem;
     margin: 0;
-
     font-weight: 700;
     font-size: 3.5rem;
     line-height: 120%;
-
     position: relative;
 
     &::before {
@@ -50,181 +46,14 @@
         width: 5px;
         height: 7.5rem;
         transform: translateY(-50%);
-
         background: linear-gradient(#3877EE, #EF5DA8);
     }
 }
 
-.Carousel {
-    box-sizing: border-box;
-    position: absolute;
-    top: 13.4375rem;
-    left: calc(50% - 16.5625rem);
-    width: 33.125rem;
-    height: 33.125rem;
-    border-radius: 50%;
-    border: 1px solid rgba(66, 86, 122, 0.1);
-}
-
-.Period {
-    position: absolute;
-    top: 30rem;
-    left: 50%;
-    transform: translate(calc(-50% - 1rem), -50%);
-
-    font-style: normal;
-    font-weight: 700;
-    font-size: 12.5rem;
-    line-height: 10rem;
-    text-align: center;
-    letter-spacing: -0.02em;
-
-    .PeriodStart {
-        color: #5D5FEF;
-    }
-
-    .PeriodEnd {
-        color: #EF5DA8;
-    }
-}
-
-.CarouselControls {
-    margin: 24.5625rem 0 0 5rem;
-}
-
-.CarouselControlsNumber {
-    font-weight: 400;
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-}
-
-.CarouselControlsButtons {
-    margin-top: 1.25rem;
-    display: flex;
-    gap: 1.25rem;
-
-    .ControlButton {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-sizing: border-box;
-        width: 3.125rem;
-        height: 3.125rem;
-        border-radius: 50%;
-        border: 1px solid rgb(66, 86, 122);
-        background: #F4F5F9;
-        cursor: pointer;
-
-        &:hover:not(.Disabled) {
-            background: #FFFFFF;
-        }
-
-        .Arrow {
-            stroke: rgb(66 86 122);
-            stroke-width: 2;
-
-            &.Right {
-                transform: rotate(180deg);
-            }
-        }
-
-        &.Disabled {
-            border: 1px solid rgba(66, 86, 122, 0.5);
-            cursor: unset;
-            
-            .Arrow {
-                stroke: rgba(66, 86, 122, 0.5);
-            }
-        }
-    }
-}
-
-.SwiperContainer {
-    position: relative;
-    height: 8.4375rem;
-    padding: 0 5rem;
-    margin-top: 3.5rem;
-}
-
-.Swiper {
-    overflow: hidden;
-}
-
-.SwiperWrapper {
-    display: flex;
-    justify-content: space-between;
-}
-
-.SwiperSlide {
-    width: 20rem;
-    min-width: 20rem;
-    padding-right: 5rem;
-
-    &:last-child {
-        padding-right: 0;
-    }
-}
-
-.SwiperButton {
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 15px rgba(56, 119, 238, 0.1);
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &:hover {
-        background: #F4F5F9;
-    }
-
-    &.Previous {
-        left: 1.25rem;
-    }
-
-    &.Next {
-        right: 1.25rem;
-
-        .Arrow {
-            transform: rotate(180deg);
-        }
-    }
-
-    &.Disabled {
-        display: none;
-    }
-
-    .Arrow {
-        stroke: #3877EE;
-        stroke-width: 2;
-    }
-}
-
-.Year {
-    font-family: 'Bebas Neue', sans-serif;
-    font-weight: 400;
-    font-size: 1.5625rem;
-    line-height: 120%;
-    text-transform: uppercase;
-    color: #3877EE;
-}
-
-.Description {
-    font-weight: 400;
-    font-size: 1.25rem;
-    line-height: 1.875rem;
-    color: #42567A;
-}
-
 @media only screen and (max-width: 37.5em) {
     .Container {
-        padding-top: 3.6875rem;
+        padding: 3.6875rem 1.25rem 0 1.25rem;
+        border: none;
 
         &:before, &:after {
             display: none;
@@ -232,36 +61,13 @@
     }
 
     .Title {
-        padding-left: 1.25rem;
         width: 7.6875rem;
-
+        padding: 0;
         font-size: 1.25rem;
         line-height: 120%;
 
         &::before {
             display: none;
         }
-    }
-
-    .Carousel {
-        display: none;
-    }
-
-    .Period {
-        position: static;
-        transform: translateX(-0.1875rem);
-
-        margin: 3.5rem auto 0 auto;
-        width: 17.0625rem;
-        font-size: 3.5rem;
-        line-height: 4.5rem;
-    }
-
-    .CarouselControls {
-        display: none;
-    }
-
-    .SwiperContainer {
-        display: none;
     }
 }

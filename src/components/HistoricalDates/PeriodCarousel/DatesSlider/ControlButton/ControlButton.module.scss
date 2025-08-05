@@ -1,0 +1,26 @@
+.ControlButton {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 15px rgba(56, 119, 238, 0.1);
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.Disabled {
+        display: none;
+    }
+}
+
+.Arrow {
+    stroke: #3877EE;
+    stroke-width: 2;
+    transform: scale(0.83);
+
+    &.Rotated {
+        transform: scale(0.83) rotate(180deg);
+    }
+}

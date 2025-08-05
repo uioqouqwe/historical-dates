@@ -1,7 +1,8 @@
 import { useGSAP } from '@gsap/react';
-import { usePrevious } from '../../../hooks/usePrevious';
-import { useRef } from 'react';
 import gsap from 'gsap';
+import { useRef } from 'react';
+
+import { usePrevious } from '@/hooks/usePrevious';
 
 type TProps = {
     number: number
@@ -15,7 +16,9 @@ function PeriodNumber({ number, className }: Readonly<TProps>) {
     useGSAP(() => {
         gsap.fromTo(
             periodNumberRef.current,
-            { textContent: previousNumber },
+            {
+                textContent: previousNumber
+            },
             {
                 textContent: number,
                 duration: 1,

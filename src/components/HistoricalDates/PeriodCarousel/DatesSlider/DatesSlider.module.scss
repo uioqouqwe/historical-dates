@@ -1,0 +1,105 @@
+.Wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Slide {
+    width: 20rem;
+    min-width: 20rem;
+    padding-right: 5rem;
+
+    &:last-child {
+        padding-right: 0;
+    }
+}
+
+.ControlButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+
+    &:hover {
+        background: #F4F5F9;
+    }
+
+    &.Previous {
+        left: 1.25rem;
+    }
+
+    &.Next {
+        right: 1.25rem;
+    }
+}
+
+.Year {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    font-size: 1.5625rem;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #3877EE;
+    margin: 0;
+}
+
+.Description {
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    color: #42567A;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .Wrapper {
+        order: 2;
+    }
+
+    .Slide {
+        width: 10.375rem;
+        min-width: 10.375rem;
+        padding-right: 1.5625rem;
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+
+        &:last-child {
+            padding-right: 0;
+        }
+
+        &.NotFullyVisible {
+            opacity: 0.4;
+        }
+    }
+
+    .ControlButton {
+        display: none;
+    }
+
+    .Year {
+        font-size: 1rem;
+        line-height: 120%;
+    }
+
+    .Description {
+        font-size: 0.875rem;
+        line-height: 145%;
+    }
+
+    .SectionName {
+        position: relative;
+        order: 1;
+        margin: 3rem 0;
+        font-size: 0.875rem;
+        font-weight: 700;
+        color: #42567A;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -1.75rem;
+            width: 100%;
+            height: 1px;
+            background: #C7CDD9;
+        }
+    }
+}

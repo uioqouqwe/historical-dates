@@ -1,0 +1,98 @@
+.Carousel {
+    display: flex;
+    flex-direction: column;
+}
+
+.CarouselWrapper {
+    box-sizing: border-box;
+    position: absolute;
+    top: 13.4375rem;
+    left: calc(50% - 16.5625rem);
+    width: 33.125rem;
+    height: 33.125rem;
+    border-radius: 50%;
+    border: 1px solid rgba(66, 86, 122, 0.1);
+}
+
+.PeriodYears {
+    position: absolute;
+    top: 30rem;
+    left: 50%;
+    transform: translate(calc(-50% - 1rem), -50%);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12.5rem;
+    line-height: 10rem;
+    text-align: center;
+    letter-spacing: -0.02em;
+}
+
+.CarouselControls {
+    position: relative;
+    margin: 24.5625rem 0 0 5rem;
+}
+
+.DatesSlider {
+    position: relative;
+    padding: 0 5rem;
+    margin-top: 3.5rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5rem;
+        height: 100%;
+        background: #F4F5F9;
+        z-index: 1;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 5rem;
+        height: 100%;
+        background: #F4F5F9;
+        z-index: 1;
+    }
+}
+
+@media only screen and (max-width: 37.5em) {
+    .CarouselWrapper {
+        display: none;
+    }
+
+    .PeriodYears {
+        order: 1;
+        position: static;
+        transform: translateX(-0.1875rem);
+        margin: 3.5rem auto 0 auto;
+        width: 17.0625rem;
+        font-size: 3.5rem;
+        line-height: 4.5rem;
+    }
+
+    .CarouselControls {
+        order: 4;
+    }
+
+    .DatesSlider {
+        margin: 0;
+        padding: 0;
+        order: 2;
+
+        &:before, &:after {
+            display: none;
+        }
+    }
+
+    .CarouselControls {
+        margin: 4.75rem 0 0 0;
+    }
+}
